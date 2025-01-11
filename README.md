@@ -20,9 +20,14 @@ ng serve
 
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
-A json-server has been set up for this project database
+A json-server database has been set up for this project database
 
 ## Json-server
+To install json-server, cd to the directory where the UI project is located, and run: 
+```bash
+npm i json-server
+```
+
 To start the serve, run:
 
 ```bash
