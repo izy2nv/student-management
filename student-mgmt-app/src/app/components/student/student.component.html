@@ -1,0 +1,48 @@
+<div class="card row">
+    <div class="card-header">
+        <h6 class="card-title">Student</h6>
+    </div>
+    <div class="row">
+        <div class="my-3 col-3">
+            <div>
+                <img src="/src/assets/images/student.jpg" alt="student" class="img-fluid" />
+            </div>
+            <p-divider />
+            <div class="row">
+                <div class="col-12">
+                    <span>ID: </span> {{student?.id}}
+                </div>
+                <div class="col-12">
+                    <span>Name: </span> {{student?.fName}} {{student?.lName}}
+                </div>
+                <div class="col-12">
+                    <span>Email: </span> {{student?.email}}
+                </div>
+                <div class="col-12">
+                    <span>Phone Number: </span> {{student?.phone}}
+                </div>
+                <div class="mt-2">
+                    <p-button label="Manage Courses" severity="secondary" (click)="manageCourses()" />
+                </div>
+            </div>
+        </div>
+        <div class="col-9">
+            <div class="card flex justify-center my-3">
+                <p-panel header="General Information">
+                    <ng-template #icons>
+                        <p-button icon="pi pi-user-edit" severity="secondary" (click)="editStudent()" /> Edit Profile
+                    </ng-template>
+                    <p class="m-0">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                        deserunt mollit anim id est laborum.
+                    </p>
+                </p-panel>
+            </div>
+        </div>
+    </div>
+
+</div>

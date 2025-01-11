@@ -1,0 +1,207 @@
+{
+  "students": [
+    {
+      "id": "49d0",
+      "fName": "Israel",
+      "lName": "Esanvvx",
+      "phone": "(333) 112-1221",
+      "email": "ioesan84@gmail.com",
+      "courses": [
+        {
+          "id": "10",
+          "name": "French"
+        },
+        {
+          "id": "8",
+          "name": "Health"
+        },
+        {
+          "id": "3",
+          "name": "History"
+        }
+      ]
+    },
+    {
+      "0": {
+        "id": "10",
+        "name": "French"
+      },
+      "fName": "Rita",
+      "lName": "Ebinum",
+      "phone": "(434) 342-3121",
+      "email": "eezcxxiboyy@xyahoo.com",
+      "id": "0f7b",
+      "courses": [
+        {
+          "id": "4",
+          "name": "English"
+        }
+      ]
+    },
+    {
+      "id": "3ded",
+      "fName": "Israel",
+      "lName": "Esan",
+      "phone": "(878) 787-8787",
+      "email": "ioesan8gg4@gmail.com"
+    },
+    {
+      "id": "a04b",
+      "fName": "Israel",
+      "lName": "Esan",
+      "phone": "(878) 787-8787",
+      "email": "ioesan8gg4@gmail.com"
+    },
+    {
+      "id": "d2c1",
+      "fName": "Israel",
+      "lName": "Esan",
+      "phone": "(888) 989-8989",
+      "email": "ioesabn84@gmail.com"
+    },
+    {
+      "id": "84f1",
+      "fName": "Israel",
+      "lName": "Esank",
+      "phone": "(988) 989-8989",
+      "email": "ioesan84@gmail.com"
+    },
+    {
+      "id": "82dc",
+      "fName": "Israel",
+      "lName": "Esank",
+      "phone": "(988) 989-8989",
+      "email": "ioesan84@gmail.com"
+    },
+    {
+      "id": "e310",
+      "fName": "qaa",
+      "lName": "sa",
+      "phone": "(123) 232-3232",
+      "email": "ioesan84@gmail.com"
+    },
+    {
+      "id": "01b7",
+      "fName": "Israel",
+      "lName": "Esan",
+      "phone": "(434) 434-3432",
+      "email": "ioesan84@gmail.com"
+    },
+    {
+      "id": "e905",
+      "fName": "Israel",
+      "lName": "Esan",
+      "phone": "(332) 223-2323",
+      "email": "ioesan84@gmail.com"
+    },
+    {
+      "id": "c229",
+      "fName": "Israel",
+      "lName": "Esan",
+      "phone": "(993) 387-9282",
+      "email": "ioesan84@gmail.com"
+    },
+    {
+      "fName": "Israel",
+      "lName": "Esan",
+      "phone": "(323) 123-2232",
+      "email": "ioesan84@wgmail.com",
+      "id": "a528"
+    },
+    {
+      "fName": "Israel",
+      "lName": "Esan",
+      "phone": "(323) 112-1212",
+      "email": "ioesans84@gmail.com",
+      "id": "b60d"
+    },
+    {
+      "fName": "Israel",
+      "lName": "Esan",
+      "phone": "(276) 327-3276",
+      "email": "iwwwn84@gmail.com",
+      "id": "3328"
+    },
+    {
+      "fName": "Israel",
+      "lName": "Esan",
+      "phone": "(342) 322-3232",
+      "email": "ioesvvan84@gmail.com",
+      "id": "fc9b"
+    },
+    {
+      "id": "e5d9",
+      "fName": "james",
+      "lName": "chase",
+      "phone": "(902) 323-8923",
+      "email": "israel.esan@csra.com",
+      "courses": [
+        {
+          "id": "4",
+          "name": "English"
+        },
+        {
+          "id": "3",
+          "name": "History"
+        },
+        {
+          "id": "1",
+          "name": "Math"
+        },
+        {
+          "id": "7",
+          "name": "PE"
+        }
+      ]
+    },
+    {
+      "id": "24aa",
+      "fName": "Israel",
+      "lName": "Esan",
+      "phone": "(998) 989-8988",
+      "email": "ioesan84@gmail.com"
+    }
+  ],
+  "courses": [
+    {
+      "id": "1",
+      "name": "Math"
+    },
+    {
+      "id": "2",
+      "name": "Science"
+    },
+    {
+      "id": "3",
+      "name": "History"
+    },
+    {
+      "id": "4",
+      "name": "English"
+    },
+    {
+      "id": "5",
+      "name": "Art"
+    },
+    {
+      "id": "6",
+      "name": "Music"
+    },
+    {
+      "id": "7",
+      "name": "PE"
+    },
+    {
+      "id": "8",
+      "name": "Health"
+    },
+    {
+      "id": "9",
+      "name": "Spanish"
+    },
+    {
+      "id": "10",
+      "name": "French"
+    }
+  ]
+}

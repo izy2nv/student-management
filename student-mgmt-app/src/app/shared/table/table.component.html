@@ -1,0 +1,38 @@
+<p-table #dt [columns]="cols" [value]="vals" dataKey="id" [rows]="5" [rowsPerPageOptions]="[5, 10, 25, 50]"
+    [paginator]="true" [globalFilterFields]="filterFields" [showCurrentPageReport]="true" showPaginator="true">
+    <ng-template #caption>
+        <div class="flex">
+            <p-iconfield iconPosition="left" class="ml-auto">
+                <input pInputText type="text" (input)="applyGlobalFilter($event)" placeholder="Search Student" />
+            </p-iconfield>
+        </div>
+    </ng-template>
+
+    <ng-template #header let-columns>
+        <tr>
+            <th *ngFor="let col of columns" scope="col">
+                {{ col.header }}
+            </th>
+        </tr>
+    </ng-template>
+    <ng-template #body let-rowData let-columns="columns">
+        <tr>
+            <td *ngFor="let col of columns" scope="row">
+                <ng-container>
+                    <div *ngIf="col.field === 'actions'; else tableData" class="row">
+                        <div *ngFor="let action of col.actions" class="col-auto">
+                            <p-button [severity]="action.severity" [label]="action.label"
+                                (click)="callFn(action.fld, rowData)" />
+                        </div>
+                    </div>
+                    <ng-template #tableData><div *ngIf="col.field !== 'name'; else nameTemplate">{{ rowData[col.field] }}</div></ng-template>
+                    <ng-template #nameTemplate>
+                        <div>
+                            <a [href]="'/student/' + rowData.id" [routerLink]="'/student/' + rowData.id ">{{ rowData[col.field] }}</a>
+                        </div>
+                    </ng-template>
+                </ng-container>
+            </td>
+        </tr>
+    </ng-template>
+</p-table>

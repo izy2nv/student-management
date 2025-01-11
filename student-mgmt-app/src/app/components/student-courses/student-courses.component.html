@@ -1,0 +1,33 @@
+<div class="p-3">
+    <div class="px-4 mx-4">
+        <div class="mx-2">
+            <h5 class="font-weight-bold">Course Management</h5>
+            <h6>Student: {{student?.fName + ' ' + student?.lName}} (ID: {{student?.id}})</h6>
+            <h6>Number of enrolled courses: {{student?.courses?.length ? student.courses.length : 0}}</h6>
+        </div>
+    </div>
+    <div class="mt-2 mb-4">
+        <div>
+            <p-picklist [source]="allCourses" [target]="studentCourseList" [dragdrop]="true" [responsive]="true" n
+                tabindex="0" [stripedRows]="true" (onMoveToTarget)="onMoveToTarget()"
+                (onMoveAllToTarget)="onMoveToTarget()" (onMoveToSource)="onMoveToSource()"
+                [sourceStyle]="{ height: '30rem' }" [targetStyle]="{ height: '30rem' }" breakpoint="1400px"
+                filterBy="name">
+                <ng-template let-item #item>
+                    {{ item.name }}
+                </ng-template>
+                <ng-template #sourceHeader><strong>All Courses</strong></ng-template>
+                <ng-template #targetHeader><strong>Student's Courses</strong></ng-template>
+            </p-picklist>
+        </div>
+        <div class="d-flex mt-4 justify-content-center">
+            <div>
+                <p-button [label]="'Update'" (click)="showDialog()" [disabled]="areArraysEqual()" />
+            </div>
+            <div>
+                <p-button label="Cancel" [link]="true" routerLink="/students" />
+            </div>
+        </div>
+    </div>
+</div>
+<app-prompt #prompt (fnEmitter)="updateStudentCourses()"></app-prompt>

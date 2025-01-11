@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card mt-4">
+        <div class="card-header">
+          <h3 class="card-title">Welcome</h3>
+          <div>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+              <div class="container-fluid">
+                <div class="collapse navbar-collapse">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link" routerLink="students">Students</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" routerLink="add-student">Add Student</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+        <div class="p-3">
+          <div *ngIf="loaderService?.loaderCounter$ | async" class="loading-state">
+            <div class="lds-spinner text-center position-relative">
+              <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            </div>
+          </div>
+          <router-outlet />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<p-toast />
