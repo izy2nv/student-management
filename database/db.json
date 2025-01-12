@@ -1,11 +1,144 @@
 {
   "students": [
     {
-      "id": "4da8",
-      "fName": "Israel",
-      "lName": "Esan",
-      "phone": "(919) 949-4224",
-      "email": "ioesan84@gmail.com"
+      "fName": "James",
+      "lName": "Edwards",
+      "phone": "(976) 767-6690",
+      "email": "ezib@aol.com",
+      "id": "4fff"
+    },
+    {
+      "id": "5fff",
+      "fName": "John",
+      "lName": "Doe",
+      "phone": "(699) 233-0473",
+      "email": "ab@yahoo.com"
+    },
+    {
+      "fName": "Test",
+      "lName": "tester",
+      "phone": "(873) 873-3738",
+      "email": "test@gmail.com",
+      "id": "aa35"
+    },
+    {
+      "fName": "Tester",
+      "lName": "usertest",
+      "phone": "(924) 123-4044",
+      "email": "ght@yahoo.com",
+      "id": "bb35"
+    },
+    {
+      "fName": "Test",
+      "lName": "user",
+      "phone": "(870) 434-4897",
+      "email": "user3@qol.com",
+      "id": "cc35"
+    },
+    {
+      "fName": "Test",
+      "lName": "userfour",
+      "phone": "(665) 968-4238",
+      "email": "user4@qol.com",
+      "id": "dd35"
+    },
+    {
+      "fName": "Nikky",
+      "lName": "James",
+      "phone": "(873) 873-3738",
+      "email": "user3@qol.com",
+      "id": "ee35"
+    },
+    {
+      "fName": "Test",
+      "lName": "Johnson",
+      "phone": "(873) 873-3738",
+      "email": "user3@qol.com",
+      "id": "ff35"
+    },
+    {
+      "fName": "Test",
+      "lName": "auto",
+      "phone": "(873) 873-3738",
+      "email": "user3@qol.com",
+      "id": "gg35"
+    },
+    {
+      "id": "hh35",
+      "fName": "Test",
+      "lName": "Christy",
+      "phone": "(873) 873-3738",
+      "email": "user3@qol.com"
+    },
+    {
+      "id": "ii35",
+      "fName": "Test",
+      "lName": "Esther",
+      "phone": "(788) 543-0077",
+      "email": "user9@qol.com"
+    },
+    {
+      "id": "jj35",
+      "fName": "Test",
+      "lName": "Ruth",
+      "phone": "(441) 098-4323",
+      "email": "user9@qol.com"
+    },
+    {
+      "id": "kk35",
+      "fName": "Test",
+      "lName": "Solomon",
+      "phone": "(690) 873-3738",
+      "email": "usegggff3@qol.com"
+    },
+    {
+      "id": "ll35",
+      "fName": "Test",
+      "lName": "Daniel",
+      "phone": "(585) 873-3738",
+      "email": "user12@qol.com"
+    },
+    {
+      "id": "mm35",
+      "fName": "Test",
+      "lName": "Philly",
+      "phone": "(231) 873-3738",
+      "email": "user13@qol.com"
+    },
+    {
+      "id": "nn35",
+      "fName": "Test",
+      "lName": "Grace",
+      "phone": "(873) 873-3738",
+      "email": "user14@qol.com"
+    },
+    {
+      "id": "oo35",
+      "fName": "Test",
+      "lName": "Paul",
+      "phone": "(873) 873-3738",
+      "email": "user15@qol.com"
+    },
+    {
+      "id": "pp35",
+      "fName": "Test",
+      "lName": "Sophia",
+      "phone": "(879) 655-6638",
+      "email": "user16@qol.com"
+    },
+    {
+      "id": "qq35",
+      "fName": "Test",
+      "lName": "Ahmed",
+      "phone": "(909) 543-3038",
+      "email": "user17@qol.com"
+    },
+    {
+      "id": "rr35",
+      "fName": "Test",
+      "lName": "Cynthia",
+      "phone": "(666) 873-3738",
+      "email": "user18@qol.com"
     }
   ],
   "courses": [

@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, OnInit, ViewChild } from '@angular/core';
+import { Component, Input, OnChanges, OnDestroy, ViewChild } from '@angular/core';
 import { ReactiveFormsModule, FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ActionsSubject, Store } from '@ngrx/store';
 import { ButtonModule } from 'primeng/button';
@@ -32,7 +32,7 @@ import { take } from 'rxjs/operators';
   templateUrl: './add-student.component.html',
   styleUrl: './add-student.component.scss'
 })
-export class AddStudentComponent implements OnChanges {
+export class AddStudentComponent implements OnChanges, OnDestroy {
   @Input() isEditing: boolean = false;
   @Input() student: any;
   studentForm: FormGroup;
@@ -109,5 +109,9 @@ export class AddStudentComponent implements OnChanges {
   showErrMsg(msg: string) {
     this.errorMsg = msg;
     this.addStudentErr = true;
+  }
+
+  ngOnDestroy() {
+    this.subscription?.unsubscribe();
   }
 }

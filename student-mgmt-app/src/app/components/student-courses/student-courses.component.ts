@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectorRef, ViewChild } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef, ViewChild, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Store, ActionsSubject } from '@ngrx/store';
 import { selectAllCourses, selectStudents } from '../../store/selectors/students.selector';
@@ -24,7 +24,7 @@ import { take } from 'rxjs/operators';
   templateUrl: './student-courses.component.html',
   styleUrl: './student-courses.component.scss'
 })
-export class StudentCoursesComponent implements OnInit {
+export class StudentCoursesComponent implements OnInit, OnDestroy {
   allCourses: Array<object> | undefined;
   studentCourseList: Array<object> | undefined;
   studentId: string | null = this.route.snapshot.paramMap.get('id');
@@ -93,5 +93,9 @@ export class StudentCoursesComponent implements OnInit {
 
   areArraysEqual() {
     return isEqual(this.initialCourses, this.studentCourseList);
+  }
+
+  ngOnDestroy() {
+    this.subscription?.unsubscribe();
   }
 }

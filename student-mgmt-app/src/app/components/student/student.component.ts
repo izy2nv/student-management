@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { DividerModule } from 'primeng/divider';
 import { IStudent } from '../../interfaces/student';
 import { PanelModule } from 'primeng/panel';
@@ -7,6 +7,7 @@ import { selectStudents, selectStudent } from '../../store/selectors/students.se
 import { ActivatedRoute, Router } from '@angular/router';
 import *  as Actions from '../../store/actions/students.actions';
 import { ButtonModule } from 'primeng/button';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-student',
@@ -14,10 +15,12 @@ import { ButtonModule } from 'primeng/button';
   templateUrl: './student.component.html',
   styleUrl: './student.component.scss'
 })
-export class StudentComponent implements OnInit {
+export class StudentComponent implements OnInit, OnDestroy {
   constructor(private route: ActivatedRoute, private router: Router, private store: Store,) { }
   student: IStudent | undefined;
   studentId: string | null = this.route.snapshot.paramMap.get('id');
+    private subscription: Subscription | undefined;
+  
   ngOnInit(): void {
     this.getStudentFromStore(this.studentId)
   }
@@ -44,5 +47,9 @@ export class StudentComponent implements OnInit {
 
   manageCourses() {
     this.router.navigate([`students/${this.studentId}/courses`]);
+  }
+
+  ngOnDestroy() {
+    this.subscription?.unsubscribe();
   }
 }

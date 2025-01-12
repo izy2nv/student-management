@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, OnDestroy } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
 import { TableComponent } from '../../shared/table/table.component';
 import { IStudent } from '../../interfaces/student';
@@ -21,7 +21,7 @@ import { take } from 'rxjs/operators';
   templateUrl: './all-students.component.html',
   styleUrl: './all-students.component.scss'
 })
-export class AllStudentsComponent implements OnInit {
+export class AllStudentsComponent implements OnInit, OnDestroy {
   students: IStudent[] = [];
   filterFields: Array<string> = ['name', 'phone', 'email'];
   cols: Array<object>;
@@ -98,5 +98,9 @@ export class AllStudentsComponent implements OnInit {
           this.appComponent.showSuccess('Student deleted successfully.');
         }
       });
+  }
+
+  ngOnDestroy() {
+    this.subscription?.unsubscribe();
   }
 }
