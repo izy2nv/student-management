@@ -5,7 +5,17 @@
       "lName": "Edwards",
       "phone": "(976) 767-6690",
       "email": "ezib@aol.com",
-      "id": "4fff"
+      "id": "4fff",
+      "courses": [
+        {
+          "id": "4",
+          "name": "English"
+        },
+        {
+          "id": "8",
+          "name": "Health"
+        }
+      ]
     },
     {
       "id": "5fff",
@@ -26,14 +36,50 @@
       "lName": "usertest",
       "phone": "(924) 123-4044",
       "email": "ght@yahoo.com",
-      "id": "bb35"
+      "id": "bb35",
+      "courses": [
+        {
+          "id": "5",
+          "name": "Art"
+        },
+        {
+          "id": "4",
+          "name": "English"
+        },
+        {
+          "id": "6",
+          "name": "Music"
+        },
+        {
+          "id": "7",
+          "name": "PE"
+        },
+        {
+          "id": "2",
+          "name": "Science"
+        },
+        {
+          "id": "9",
+          "name": "Spanish"
+        }
+      ]
     },
     {
       "fName": "Test",
       "lName": "user",
       "phone": "(870) 434-4897",
       "email": "user3@qol.com",
-      "id": "cc35"
+      "id": "cc35",
+      "courses": [
+        {
+          "id": "10",
+          "name": "French"
+        },
+        {
+          "id": "8",
+          "name": "Health"
+        }
+      ]
     },
     {
       "fName": "Test",
@@ -131,7 +177,17 @@
       "fName": "Test",
       "lName": "Ahmed",
       "phone": "(909) 543-3038",
-      "email": "user17@qol.com"
+      "email": "user17@qol.com",
+      "courses": [
+        {
+          "id": "7",
+          "name": "PE"
+        },
+        {
+          "id": "9",
+          "name": "Spanish"
+        }
+      ]
     },
     {
       "id": "rr35",
