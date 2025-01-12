@@ -13,6 +13,7 @@ import { CommonModule } from '@angular/common';
 import { Subscription } from 'rxjs';
 import { ofType } from '@ngrx/effects';
 import *  as Actions from '../../store/actions/students.actions';
+import { take } from 'rxjs/operators';
 
 @Component({
   selector: 'app-all-students',
@@ -91,10 +92,11 @@ export class AllStudentsComponent implements OnInit {
     this.store.dispatch(deleteStudent({ id: <string>this.studentObj?.id }));
     this.subscription = this.actionsSubject.pipe(
       ofType(Actions.deleteStudentSuccess)
-    ).subscribe(action => {
-      if (action) {
-        this.appComponent.showSuccess('Student deleted successfully.');
-      }
-    });
+    ).pipe(
+      take(1)).subscribe(action => {
+        if (action) {
+          this.appComponent.showSuccess('Student deleted successfully.');
+        }
+      });
   }
 }

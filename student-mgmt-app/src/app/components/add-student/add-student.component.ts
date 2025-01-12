@@ -13,6 +13,7 @@ import { Subscription } from 'rxjs';
 import { Message } from 'primeng/message';
 import *  as Actions from '../../store/actions/students.actions';
 import { ofType } from '@ngrx/effects';
+import { take } from 'rxjs/operators';
 
 @Component({
   selector: 'app-student-form',
@@ -91,17 +92,18 @@ export class AddStudentComponent implements OnChanges {
   handleRequestState(action: any, method: string) {
     this.subscription = this.actionsSubject.pipe(
       ofType(action)
-    ).subscribe(action => {
-      if (action) {
-        this.appComponent.showSuccess(method == 'add' ? 'Student added successfully.' : 'Student updated successfully.');
-        this.studentForm.reset();
-        this.router.navigate(['students']);
-      } else {
-        if (method == 'update') {
-          this.showErrMsg('An error occurred. Try again later.');
+    ).pipe(
+      take(1)).subscribe(action => {
+        if (action) {
+          this.appComponent.showSuccess(method == 'add' ? 'Student added successfully.' : 'Student updated successfully.');
+          this.studentForm.reset();
+          this.router.navigate(['students']);
+        } else {
+          if (method == 'update') {
+            this.showErrMsg('An error occurred. Try again later.');
+          }
         }
-      }
-    });
+      });
   }
 
   showErrMsg(msg: string) {
