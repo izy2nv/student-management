@@ -13,7 +13,7 @@ import { CommonModule } from '@angular/common';
 import { Subscription } from 'rxjs';
 import { ofType } from '@ngrx/effects';
 import *  as Actions from '../../store/actions/students.actions';
-import { take } from 'rxjs/operators';
+import { take, filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-all-students',
@@ -22,7 +22,7 @@ import { take } from 'rxjs/operators';
   styleUrl: './all-students.component.scss'
 })
 export class AllStudentsComponent implements OnInit, OnDestroy {
-  students: IStudent[] = [];
+  students$ = this.store.select(selectStudents);
   filterFields: Array<string> = ['name', 'phone', 'email'];
   cols: Array<object>;
   studentObj: IStudent | undefined;
@@ -54,13 +54,12 @@ export class AllStudentsComponent implements OnInit, OnDestroy {
   }
 
   getStudentsFromStore() {
-    this.store.select(selectStudents).subscribe((students) => {
-      this.students = students;
-      if (!this.students.length) {
-        this.store.dispatch(Actions.getStudents());
-      }
+    this.students$.pipe(
+      take(1),
+      filter(students => !students.length)
+    ).subscribe(() => {
+      this.store.dispatch(Actions.getStudents());
     });
-
   }
 
   handleAction(action: any) {
